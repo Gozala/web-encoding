@@ -30,6 +30,6 @@
   "homepage": "https://github.com/gozala/web-encoding",
   "devDependencies": {
     "mocha": "^8.0.1",
-    "polendina": "^1.0.0"
+    "polendina": "git://github.com/gozala/polendina"
   }
 }
