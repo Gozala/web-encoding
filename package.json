@@ -14,7 +14,7 @@
   "exports": {
     ".": {
       "import": "./src/lib.js",
-      "require": "./src/lib.cjs.js",
+      "require": "./src/lib.cjs",
       "browser": "./src/lib.browser.js"
     }
   },
