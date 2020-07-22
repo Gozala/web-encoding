@@ -20,7 +20,7 @@
   },
   "scripts": {
     "test:node": "mocha test/test-*.spec.cjs",
-    "test:browser": "polendina --cleanup test/test-*.cjs",
+    "test:browser": "playwright-test test/test-*.cjs",
     "test:es": "mocha test/test-*.spec.js",
     "test:cjs": "npm run test:node && npm run test:browser",
     "test": "npm run test:es && npm run test:cjs"
@@ -30,6 +30,6 @@
   "homepage": "https://github.com/gozala/web-encoding",
   "devDependencies": {
     "mocha": "^8.0.1",
-    "polendina": "git://github.com/gozala/polendina"
+    "playwright-test": "0.7.1"
   }
 }
