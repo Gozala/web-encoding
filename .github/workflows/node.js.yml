@@ -37,6 +37,7 @@ jobs:
       - name: Type Check
         run: npm run check --if-present
       - name: Test ES
+        if: ${{matrix.node-version < 12}}
         run: npm run test:es --if-present
       - name: Test CommonJS
         run: npm run test:cjs --if-present
