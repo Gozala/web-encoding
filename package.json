@@ -1,0 +1,35 @@
+{
+  "name": "web-encoding",
+  "version": "1.0.0",
+  "description": "TextEncoder and TextDecoder APIs from Encoding Standard APIs in a universal package",
+  "keywords": [
+    "TextEncoder",
+    "TextDecoder"
+  ],
+  "type": "module",
+  "browser": "./src/lib.browser.js",
+  "main": "./src/lib.cjs",
+  "module": "./src/lib.js",
+  "types": "./src/lib.d.ts",
+  "exports": {
+    ".": {
+      "import": "./src/lib.js",
+      "require": "./src/lib.cjs.js",
+      "browser": "./src/lib.browser.js"
+    }
+  },
+  "scripts": {
+    "test:node": "mocha test/test-*.spec.cjs",
+    "test:browser": "polendina --cleanup test/test-*.cjs",
+    "test:es": "mocha test/test-*.spec.js",
+    "test:cjs": "npm run test:node && npm run test:browser",
+    "test": "npm run test:es && npm run test:cjs"
+  },
+  "license": "MIT",
+  "author": "Irakli Gozalishvili <dev@gozala.io>",
+  "homepage": "https://github.com/gozala/web-encoding",
+  "devDependencies": {
+    "mocha": "^8.0.1",
+    "polendina": "^1.0.0"
+  }
+}
