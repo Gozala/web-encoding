@@ -17,7 +17,7 @@ describe("text encode/decode", () => {
 
   test("can encode text", () => {
     const bytes = new TextEncoder().encode("hello world")
-    expect(bytes).toEqual(data)
+    expect([...bytes]).toEqual([...data])
   })
 
   test("can decode text", () => {
