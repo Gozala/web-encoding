@@ -29,6 +29,7 @@
   "author": "Irakli Gozalishvili <dev@gozala.io>",
   "homepage": "https://github.com/gozala/web-encoding",
   "devDependencies": {
+    "jest": "26.4.0",
     "mocha": "^8.0.1",
     "playwright-test": "0.7.1"
   }
