@@ -41,6 +41,8 @@ jobs:
         run: npm run test:es --if-present
       - name: Test CommonJS
         run: npm run test:cjs --if-present
+      - name: Test React
+        run: npm run test:react --if-present
   publish:
     name: Publish
     needs: test

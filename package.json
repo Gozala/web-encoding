@@ -24,7 +24,7 @@
     "test:es": "mocha test/test-*.spec.js",
     "test:cjs": "npm run test:node && npm run test:browser",
     "test:react": "react-scripts test --env=jsdom",
-    "test": "npm run test:react"
+    "test": "npm run test:es && npm run test:cjs && npm run test:react"
   },
   "license": "MIT",
   "author": "Irakli Gozalishvili <dev@gozala.io>",
