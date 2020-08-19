@@ -23,12 +23,15 @@
     "test:browser": "playwright-test test/test-*.cjs",
     "test:es": "mocha test/test-*.spec.js",
     "test:cjs": "npm run test:node && npm run test:browser",
-    "test": "npm run test:es && npm run test:cjs"
+    "test:jest:jsdom": "jest --env=jsdom test/test-lib.jest.spec.js",
+    "test:jest:node": "jest --env=node test/test-lib.jest.spec.js",
+    "test": "npm run test:es && npm run test:cjs && npm run test:jest:jsdom && npm run test:jest:node"
   },
   "license": "MIT",
   "author": "Irakli Gozalishvili <dev@gozala.io>",
   "homepage": "https://github.com/gozala/web-encoding",
   "devDependencies": {
+    "jest": "^26.4.0",
     "mocha": "^8.0.1",
     "playwright-test": "0.7.1"
   }
