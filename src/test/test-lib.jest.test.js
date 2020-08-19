@@ -1,4 +1,6 @@
-const { TextEncoder, TextDecoder } = require("../..")
+debugger
+const lib = require("../..")
+const { TextEncoder, TextDecoder } = lib
 
 describe("text encode/decode", () => {
   const data = Uint8Array.from([
