@@ -23,7 +23,11 @@
     "test:browser": "playwright-test test/test-*.cjs",
     "test:es": "mocha test/test-*.spec.js",
     "test:cjs": "npm run test:node && npm run test:browser",
-    "test": "npm run test:es && npm run test:cjs"
+    "test:types:ts": "npm test --prefix test/ts-use",
+    "test:types:esm": "npm test --prefix test/esm-use",
+    "test:types:cjs": "npm test --prefix test/cjs-use",
+    "test:types": "npm run test:types:ts && npm run test:types:esm && npm run test:types:cjs",
+    "test": "npm run test:es && npm run test:cjs && npm run test:types"
   },
   "license": "MIT",
   "author": "Irakli Gozalishvili <dev@gozala.io>",

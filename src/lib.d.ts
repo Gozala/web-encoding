@@ -1,4 +1,4 @@
-type Encoder = TextEncoder
-type Decoder = TextDecoder
+declare var TextEncoder: typeof self.TextEncoder
+declare var TextDecoder: typeof self.TextDecoder
 
-export { Encoder as TextEncoder, Decoder as TextDecoder }
+export { TextEncoder, TextDecoder }
