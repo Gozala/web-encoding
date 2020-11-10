@@ -44,6 +44,9 @@ jobs:
   validate-types:
     name: Check type use
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        test-package: ['ts', 'esm', 'cjs']
     steps:
       - uses: actions/checkout@v2
       - name: Cache node_modules
@@ -55,12 +58,8 @@ jobs:
       - name: Install
         if: steps.cache-modules.outputs.cache-hit != 'true'
         run: npm install
-      - name: Test Typesript
-        run: npm run test:types:ts
-      - name: Test ES
-        run: npm run test:types:esm
-      - name: Test CommonJS
-        run: npm run test:types:cjs
+      - name: Test ${{ matrix.test-package }}
+        run: npm run test:types:${{matrix.test-package}}
   publish:
     name: Publish
     needs: test
