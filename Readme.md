@@ -8,7 +8,7 @@ This package provides [TextEncoder][] and [TextDecoder][] [Encoding Standard][]
 APIs in a universal package. In the browsers it just exposes existing globals,
 in nodejs it exposes globals in newer node versions and ones from `util` module
 in older versions, and in the React Native environments it exposes these from
-the [@sinonjs/text-encoding](https://www.npmjs.com/package/text-encoding)
+the [@zxing/text-encoding](https://www.npmjs.com/package/@zxing/text-encoding)
 polyfill (installed as an optional dependency).
 
 Package also works as ES module and CommonJS module.
