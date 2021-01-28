@@ -22,7 +22,8 @@
   "scripts": {
     "test:node": "mocha test/test-*.spec.cjs",
     "test:browser": "playwright-test test/test-*.cjs",
-    "test:es": "mocha test/test-*.spec.js",
+    "test:react-native": "jest test/test-lib.react-native.spec.js",
+    "test:es": "mocha test/test-lib.spec.js",
     "test:cjs": "npm run test:node && npm run test:browser",
     "test:types:ts": "npm test --prefix test/ts-use",
     "test:types:esm": "npm test --prefix test/esm-use",
@@ -34,10 +35,18 @@
   "author": "Irakli Gozalishvili <dev@gozala.io>",
   "homepage": "https://github.com/gozala/web-encoding",
   "devDependencies": {
+    "browser-resolve": "^2.0.0",
+    "jest": "^26.6.3",
+    "metro-react-native-babel-preset": "^0.64.0",
     "mocha": "8.2.1",
-    "playwright-test": "1.2.0"
+    "playwright-test": "1.2.0",
+    "react-native": "^0.63.4"
   },
   "optionalDependencies": {
     "@sinonjs/text-encoding": "0.7.1"
+  },
+  "jest": {
+    "preset": "react-native",
+    "transform": {"\\.js$": ["babel-jest", {"presets": ["module:metro-react-native-babel-preset"]}]}
   }
 }
