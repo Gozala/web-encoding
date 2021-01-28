@@ -8,6 +8,7 @@
   ],
   "type": "module",
   "browser": "./src/lib.browser.js",
+  "react-native": "./src/lib.react-native.js",
   "main": "./src/lib.cjs",
   "module": "./src/lib.js",
   "types": "./src/lib.d.ts",
@@ -35,5 +36,8 @@
   "devDependencies": {
     "mocha": "8.2.1",
     "playwright-test": "1.2.0"
+  },
+  "optionalDependencies": {
+    "@sinonjs/text-encoding": "0.7.1"
   }
 }
