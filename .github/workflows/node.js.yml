@@ -41,6 +41,8 @@ jobs:
         run: npm run test:es --if-present
       - name: Test CommonJS
         run: npm run test:cjs --if-present
+      - name: Test React Native
+        run: npm run test:react-native --if-present
   validate-types:
     name: Check type use
     runs-on: ubuntu-latest
