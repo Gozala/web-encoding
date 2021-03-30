@@ -1,5 +1,3 @@
-"use strict"
-
 // In node `export { TextEncoder }` throws:
 // "Export 'TextEncoder' is not definedin module"
 // To workaround we first define constants and then export with as.
