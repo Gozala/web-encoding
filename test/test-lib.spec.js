@@ -1,4 +1,4 @@
-import { TextEncoder, TextDecoder } from "../src/lib.js"
+import { TextEncoder, TextDecoder } from "../src/lib.mjs"
 import assert from "assert"
 
 describe("text encode/decode", () => {

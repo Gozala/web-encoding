@@ -7,15 +7,13 @@
     "TextDecoder"
   ],
   "type": "module",
-  "browser": "./src/lib.browser.js",
   "react-native": "./src/lib.react-native.js",
   "main": "./src/lib.cjs",
-  "module": "./src/lib.js",
+  "module": "./src/lib.mjs",
   "types": "./src/lib.d.ts",
   "exports": {
     ".": {
-      "browser": "./src/lib.browser.js",
-      "import": "./src/lib.js",
+      "import": "./src/lib.mjs",
       "require": "./src/lib.cjs"
     }
   },
@@ -35,10 +33,11 @@
   "author": "Irakli Gozalishvili <dev@gozala.io>",
   "homepage": "https://github.com/gozala/web-encoding",
   "devDependencies": {
+    "assert": "^2.0.0",
     "jest": "^26.6.3",
     "metro-react-native-babel-preset": "^0.64.0",
-    "mocha": "8.2.1",
-    "playwright-test": "1.2.0",
+    "mocha": "8.3.2",
+    "playwright-test": "2.1.0",
     "react-native": "^0.63.4"
   },
   "optionalDependencies": {
