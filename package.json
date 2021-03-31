@@ -9,11 +9,12 @@
   "type": "module",
   "react-native": "./src/lib.react-native.js",
   "main": "./src/lib.cjs",
-  "module": "./src/lib.mjs",
+  "module": "./src/lib.js",
+  "browser": "./src/lib.js",
   "types": "./src/lib.d.ts",
   "exports": {
     ".": {
-      "import": "./src/lib.mjs",
+      "import": "./src/lib.js",
       "require": "./src/lib.cjs"
     }
   },
