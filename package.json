@@ -6,23 +6,22 @@
     "TextEncoder",
     "TextDecoder"
   ],
-  "type": "module",
   "react-native": "./src/lib.react-native.js",
-  "main": "./src/lib.cjs",
-  "module": "./src/lib.js",
-  "browser": "./src/lib.cjs",
+  "main": "./src/lib.js",
+  "module": "./src/lib.mjs",
+  "browser": "./src/lib.js",
   "types": "./src/lib.d.ts",
   "exports": {
     ".": {
-      "import": "./src/lib.js",
-      "require": "./src/lib.cjs"
+      "import": "./src/lib.mjs",
+      "require": "./src/lib.js"
     }
   },
   "scripts": {
-    "test:node": "mocha test/test-*.spec.cjs",
-    "test:browser": "playwright-test test/test-*.cjs",
+    "test:node": "mocha test/test-*.spec.js",
+    "test:browser": "playwright-test test/test-*.js",
     "test:react-native": "jest test/test-lib.react-native.spec.js",
-    "test:es": "mocha test/test-lib.spec.js",
+    "test:es": "mocha test/test-lib.spec.mjs",
     "test:cjs": "npm run test:node && npm run test:browser",
     "test:types:ts": "npm test --prefix test/ts-use",
     "test:types:esm": "npm test --prefix test/esm-use",
