@@ -1,0 +1,30 @@
+{
+  "private": true,
+  "version": "0.0.0",
+  "name": "react-native-tests",
+  "dependencies": {
+    "web-encoding": "file:../../"
+  },
+  "devDependencies": {
+    "assert": "^2.0.0",
+    "jest": "^26.6.3",
+    "metro-react-native-babel-preset": "^0.64.0",
+    "react-native": "^0.63.4"
+  },
+  "scripts": {
+    "test": "npm rm -rf ../../node_modules && npm install && jest test-lib.react-native.spec.js"
+  },
+  "jest": {
+    "preset": "react-native",
+    "transform": {
+      "\\.js$": [
+        "babel-jest",
+        {
+          "presets": [
+            "module:metro-react-native-babel-preset"
+          ]
+        }
+      ]
+    }
+  }
+}

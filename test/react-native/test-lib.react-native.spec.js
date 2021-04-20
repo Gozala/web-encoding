@@ -1,4 +1,4 @@
-const { TextEncoder, TextDecoder } = require("../src/lib.react-native.js")
+const { TextEncoder, TextDecoder } = require("web-encoding")
 const assert = require("assert")
 
 describe("text encode/decode", () => {
