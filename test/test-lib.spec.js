@@ -1,5 +1,5 @@
-import { TextEncoder, TextDecoder } from "../src/lib.js"
-import assert from "assert"
+const { TextEncoder, TextDecoder } = require("../src/lib")
+const assert = require("assert")
 
 describe("text encode/decode", () => {
   const data = Uint8Array.from([
