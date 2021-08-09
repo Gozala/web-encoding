@@ -17,6 +17,10 @@
       "require": "./src/lib.js"
     }
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gozala/web-encoding.git"
+  },
   "scripts": {
     "test:node": "mocha test/test-*.spec.js",
     "test:browser": "playwright-test test/test-*.js",
