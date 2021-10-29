@@ -12,7 +12,7 @@
     "react-native": "^0.63.4"
   },
   "scripts": {
-    "test": "npm rm -rf ../../node_modules && npm install && jest test-lib.react-native.spec.js"
+    "test": "npm install && jest test-lib.react-native.spec.js"
   },
   "jest": {
     "preset": "react-native",

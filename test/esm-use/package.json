@@ -5,7 +5,7 @@
     "web-encoding": "file:../../"
   },
   "scripts": {
-    "test": "npm rm -rf ../../node_modules && npm install && tsc --noEmit --allowJs --checkJs src/main.js"
+    "test": "npm install && tsc --noEmit --allowJs --checkJs src/main.js"
   },
   "devDependencies": {
     "typescript": "^4.2.3"

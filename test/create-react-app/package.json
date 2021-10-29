@@ -15,7 +15,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "npm rm -rf ../../node_modules && npm install && react-scripts test a --watchAll=false",
+    "test": "npm install && react-scripts test a --watchAll=false",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
