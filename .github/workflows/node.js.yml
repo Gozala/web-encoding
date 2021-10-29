@@ -62,27 +62,27 @@ jobs:
         run: npm install
       - name: Test ${{ matrix.test-package }}
         run: npm run test:types:${{matrix.test-package}}
-  publish:
-    name: Publish
-    needs: test
-    runs-on: ubuntu-latest
-    if: github.event_name == 'push' && github.ref == 'refs/heads/default'
-    steps:
-      - uses: actions/checkout@v2
-      - name: Cache node_modules
-        id: cache-modules
-        uses: actions/cache@v1
-        with:
-          path: node_modules
-          key: 12.x-${{ runner.OS }}-build-${{ hashFiles('package.json') }}
-      - name: Install
-        if: steps.cache-modules.outputs.cache-hit != 'true'
-        run: npm install
-      - name: Test
-        run: npm test
+  # publish:
+  #   name: Publish
+  #   needs: test
+  #   runs-on: ubuntu-latest
+  #   if: github.event_name == 'push' && github.ref == 'refs/heads/default'
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - name: Cache node_modules
+  #       id: cache-modules
+  #       uses: actions/cache@v1
+  #       with:
+  #         path: node_modules
+  #         key: 12.x-${{ runner.OS }}-build-${{ hashFiles('package.json') }}
+  #     - name: Install
+  #       if: steps.cache-modules.outputs.cache-hit != 'true'
+  #       run: npm install
+  #     - name: Test
+  #       run: npm test
 
-      - name: Publish
-        uses: mikeal/merge-release@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+  #     - name: Publish
+  #       uses: mikeal/merge-release@master
+  #       env:
+  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #         NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
